@@ -1,0 +1,503 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors goodliang (you@example.org)
+ * @date    2018-07-04 11:11:11
+ * @version v1
+ */
+/*共用*/
+
+body {
+  font-family: PingFangSC-Regular, Microsoft YaHei, Helvetica !important;
+  background: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  font-size: 0.32rem;
+}
+
+.iconfont {
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100% auto;
+    background-position: center;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app-wrap {
+  font-size: .32rem;
+}
+.clearfix:after{
+  clear: both;
+  content: ' ';
+  height: 0;
+  display: block;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.borB{
+  border-bottom: .04rem solid #f6f6f6;
+}
+
+body,
+html a {
+  color: #333
+}
+img{
+  display: block;
+  vertical-align: top
+}
+.hidden,
+.none {
+  display: none!important
+}
+
+.f10 {
+  font-size: 0.2rem !important;
+}
+
+.f11 {
+  font-size: 0.22rem !important;
+}
+
+.f12 {
+  font-size: 0.24rem !important;
+}
+
+.f13 {
+  font-size: 0.26rem !important;
+}
+
+.f14 {
+  font-size: 0.28rem !important;
+}
+
+.f15 {
+  font-size: 0.3rem !important;
+}
+
+.f16 {
+  font-size: 0.32rem !important;
+}
+
+.f18 {
+  font-size: 0.36rem !important;
+}
+
+.f20 {
+  font-size: 0.4rem !important;
+}
+
+.f24 {
+  font-size: 0.48rem !important;
+}
+
+.text-left {
+  text-align: left
+}
+
+.text-right {
+  text-align: right
+}
+
+.text-center {
+  text-align: center
+}
+
+.text-justify {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-hide {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.text-hide.tow-line {
+  -webkit-line-clamp: 2;
+}
+
+.text-hide.three-line {
+  -webkit-line-clamp: 3;
+}
+
+.text-default {
+  color: #333;
+}
+
+.text-info {
+  color: #666;
+}
+
+.text-muted {
+  color: #999;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-orange {
+  color: #FD792C !important;
+}
+
+.text-purple {
+  color: #7224D8 !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.p-n {
+  padding: 0;
+}
+
+.m-n {
+  margin: 0;
+}
+
+.p-xs {
+  padding: 0.1rem;
+}
+
+.p-sm {
+  padding: 0.2rem;
+}
+
+.p-md {
+  padding: 0.3rem;
+}
+
+.p-lg {
+  padding: 0.4rem;
+}
+
+.p-n {
+  padding: 0;
+}
+
+.pt-n {
+  padding-top: 0;
+}
+
+.pb-n {
+  padding-bottom: 0 !important;
+}
+
+.m-xs {
+  margin: 0.1rem;
+}
+
+.m-sm {
+  margin: 0.2rem;
+}
+
+.m-md {
+  margin: 0.3rem;
+}
+
+.m-lg {
+  margin: 0.4rem;
+}
+.mt-xs{
+  margin-top: 0.1rem
+}
+.mb-xs{
+  margin-top: 0.1rem
+}
+.ml-md{
+  margin-left: 15px;
+}
+.mt-n {
+  margin-top: 0 !important;
+}
+
+/*页面共用*/
+
+.container {}
+
+.bar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bar-nav {
+  top: 0;
+}
+
+.bar-footer {
+  bottom: 0;
+}
+
+.bar-nav~.content {
+  top: 0.92rem;
+}
+
+.bar-footer~.content {
+  bottom: 1rem;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background:#fff;
+}
+
+.bar-nav .vux-header{
+  padding: 0.04rem 0;
+}
+.sub-tit{
+  position: relative;
+  padding: 0.22rem 0 0.22rem 0.28rem;
+  font-size: 0.28rem;
+  color:#666;
+}
+.sub-tit:after{
+  content: '';
+  position: absolute;
+  top:50%;
+  left:0;
+  width: 0.08rem;
+  height:0.2rem;
+  margin-top: -.1rem;
+  background: #CD313E;
+}
+.icon-tips-number{
+  display: inline-block;
+}
+.icon-tips-number .number{
+  position: absolute;
+  margin-top: -0.06rem;
+}
+/*media*/
+.media{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.media-head{
+  margin-right: 0.2rem;
+}
+.media-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.align-self-start {
+    -ms-flex-item-align: start!important;
+    align-self: flex-start!important;
+}
+.align-self-center{
+  -ms-flex-item-align: center!important;
+  align-self: center!important;
+}
+.align-self-end {
+    -ms-flex-item-align: end!important;
+    align-self: flex-end!important;
+}
+/*框架修改*/
+.app-wrap .weui-btn:after{
+  display: none;
+}
+
+.app-wrap .weui-btn{
+  padding-left: 0.28rem;
+  padding-right: 0.28rem;
+  font-size: 0.32rem;
+  line-height: 0.88rem;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+}
+
+.app-wrap .weui-btn_mini {
+  padding: 0 1.32em;
+  line-height: 0.48rem;
+  font-size: 0.24rem;
+}
+.app-wrap button.weui-btn_plain-primary, .app-wrap input.weui-btn_plain-primary,.app-wrap  button.weui-btn_plain-default, .app-wrap input.weui-btn_plain-default,.app-wrap button.weui-btn.weui-btn_plain-warn,.app-wrap input.weui-btn.weui-btn_plain-warn,.app-wrap input.weui-btn.weui-btn_plain-danger{
+  line-height: 0.84rem;
+}
+.app-wrap button.weui-btn_plain-primary.weui-btn_mini, .app-wrap input.weui-btn_plain-primary.weui-btn_mini,.app-wrap  button.weui-btn_plain-default.weui-btn_mini, .app-wrap input.weui-btn_plain-default.weui-btn_mini,.app-wrap button.weui-btn.weui-btn_plain-warn.weui-btn_mini,.app-wrap input.weui-btn.weui-btn_plain-warn.weui-btn_mini,.app-wrap button.weui-btn.weui-btn_plain-danger.weui-btn_mini,.app-wrap input.weui-btn.weui-btn_plain-danger.weui-btn_mini{
+  line-height: 0.44rem;
+  padding: 0 0.16rem;
+}
+
+.weui-btn_danger {
+    background-color: #FE7B2E;
+}
+.weui-btn_plain-danger {
+    color: #FE7B2E !important;
+    border: 1px solid #FE7B2E !important;
+    background: transparent;
+}
+.vux-tab-selected{
+  font-weight: bold;
+}
+.app-wrap .vux-slider > .vux-indicator > a > .vux-icon-dot, .app-wrap .vux-slider .vux-indicator-right > a > .vux-icon-dot{
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+}
+.app-wrap .vux-slider > .vux-indicator,.app-wrap .vux-slider .vux-indicator-right{
+  bottom: 0;
+}
+.app-wrap .vux-tab .vux-tab-item.vux-tab-selected{
+  color:#333;
+}
+.app-wrap .vux-tab{
+  height:0.8rem;
+}
+.app-wrap .vux-tab .vux-tab-item{
+  line-height: 0.8rem;
+  font-size: 0.32rem;
+}
+.app-wrap .vux-tab .vux-tab-item.vux-tab-selected{
+  font-size: 0.36rem;
+  font-weight: normal;
+}
+.custom-tabs-a .vux-tab-wrap{
+  padding-top: 0.72rem;
+}
+.custom-tabs-a .vux-tab-container{
+  height: 0.72rem;
+}
+.custom-tabs-a .vux-tab{
+  background: none;
+  height: 0.72rem;
+}
+.custom-tabs-a .vux-tab .vux-tab-item{
+  line-height: 0.72rem;
+  font-size: 0.28rem;
+  color:#333;
+  background: none;
+}
+.custom-tabs-a .vux-tab .vux-tab-item.vux-tab-selected{
+  background: #fff;
+  font-size: 0.28rem;
+}
+.custom-tabs-a .vux-tab-bar-inner{
+  background: #FD792C;
+}
+/*手机型号适配*/
+@media screen and (max-width:320px) {
+  html {
+    font-size: 42.667px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:321px) and (max-width:360px) {
+  html {
+    font-size: 48px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:361px) and (max-width:375px) {
+  html {
+    font-size: 50px;
+/*    font-size: 13.33333vw;*/
+  }
+}
+
+@media screen and (min-width:376px) and (max-width:393px) {
+  html {
+    font-size: 52.4px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:394px) and (max-width:412px) {
+  html {
+    font-size: 54.93px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:413px) and (max-width:414px) {
+  html {
+    font-size: 55.2px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:415px) and (max-width:480px) {
+  html {
+    font-size: 64px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:540px) {
+  html {
+    font-size: 72px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:541px) and (max-width:640px) {
+  html {
+    font-size: 85.33px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:641px) and (max-width:720px) {
+  html {
+    font-size: 96px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:721px) and (max-width:768px) {
+  html {
+    font-size: 102.4px;
+/*    font-size: 13.33333vw*/
+  }
+}
+
+@media screen and (min-width:769px) {
+  html {
+    font-size: 102.4px;
+    background: #f7f7f7;
+/*    font-size: 13.33333vw*/
+  }
+  .bar,.content{
+    max-width: 768px !important;
+    margin: auto;
+  }
+}
+
+/* kpq */
+.header-t{
+  background: linear-gradient(to bottom,#7224D8,#964CF6);
+  width: 100%;
+}
